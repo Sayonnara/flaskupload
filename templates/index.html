@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPLOAD FLASK</title>
+</head>
+<body>
+  <h2 align="center">Upload de Images com Flask</h2>
+  <hr>
+  <p>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+
+              <ul>
+                  {% for message in messages  %}
+                    <li>{{message}}</li>
+                  {% endfor %}
+              </ul>
+         {% endif %}
+      {% endwith %}
+  </p>
+    {% if filename %}
+        <div>
+          <img src="{{url_for('display_image',filrnsmr=filrame)}}" alt="">
+        </div>
+    {% endif %}
+
+  <form method="post"enctype="multipart/form-data" action="{{url_for('upload_image')}}">
+      <dl>
+          <p>
+              <input type="file" name="file">
+          </p>
+      </dl>
+      <p>
+          <input type="submit" value="submit">
+      </p>
+  </form>
+</body>
+</html>
