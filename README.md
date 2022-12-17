@@ -1,6 +1,8 @@
 # flaskupload
-## Linguagem: Python
-## IDE: Pycharm
+Linguagem: Python
 
-Objetivo:
+
+IDE: Pycharm
+
+## Objetivo:
 implementar um upload de imagem com flask
